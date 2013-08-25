@@ -2,28 +2,50 @@ package de.capgeti.caplwp;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
+import android.view.SurfaceHolder;
 import com.badlogic.gdx.backends.android.AndroidLiveWallpaperService;
 
-public class LiveWallpaper extends AndroidLiveWallpaperService {
+import static android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 
+public class LiveWallpaper extends AndroidLiveWallpaperService {
     private CapLwp game;
+    private OnSharedPreferenceChangeListener onSharedPreferenceChangeListener = new OnSharedPreferenceChangeListener() {
+        @Override public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            game.updatePreference();
+        }
+    };
 
     @Override public void onCreateApplication() {
         super.onCreateApplication();
-        AndroidApplicationConfiguration cfg = new AndroidApplicationConfiguration();
-        cfg.useGL20 = true;
-
 
         SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         game = new CapLwp(defaultSharedPreferences);
 
-        defaultSharedPreferences.registerOnSharedPreferenceChangeListener(new SharedPreferences.OnSharedPreferenceChangeListener() {
-            @Override public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
-                game.updatePreference();
-            }
-        });
+        initialize(game, true);
+    }
 
-        initialize(game, cfg);
+    @Override public Engine onCreateEngine() {
+        return new MyEngine();
+    }
+
+    public class MyEngine extends AndroidWallpaperEngine implements OnSharedPreferenceChangeListener {
+
+        private SharedPreferences defaultSharedPreferences;
+
+        @Override public void onCreate(SurfaceHolder surfaceHolder) {
+            super.onCreate(surfaceHolder);
+
+            defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(LiveWallpaper.this);
+            defaultSharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
+        }
+
+        @Override public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+            game.updatePreference();
+        }
+
+        @Override public void onDestroy() {
+            super.onDestroy();
+            defaultSharedPreferences.unregisterOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
+        }
     }
 }

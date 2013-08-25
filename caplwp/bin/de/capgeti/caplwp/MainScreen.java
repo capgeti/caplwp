@@ -5,48 +5,29 @@ import android.os.Environment;
 import aurelienribon.tweenengine.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.assets.AssetDescriptor;
-import com.badlogic.gdx.assets.AssetErrorListener;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.assets.loaders.resolvers.ExternalFileHandleResolver;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 import static android.os.Environment.DIRECTORY_PICTURES;
+import static aurelienribon.tweenengine.Tween.to;
+import static de.capgeti.caplwp.CapLwp.log;
+import static de.capgeti.caplwp.SpriteAccessor.ALPHA;
 
 public class MainScreen implements Screen {
-    public static final String BASE_PATH = Gdx.files.getExternalStoragePath();
-    public static final String IMG_LOAD_PNG = "img/load.png";
-    public static final String IMG_NOFILES_PNG = "img/nofiles.png";
-    private OrthographicCamera camera;
-    private Stage stage;
-    private Sprite loaderSprite;
-    private Sprite noFileSprite;
-    private Sprite spriteToDraw = new Sprite();
-    private Sprite cachedSpriteToDraw = new Sprite();
-    private String cached;
+    private Sprite currentSprite = new Sprite();
+    private Sprite cachedSprite = new Sprite();
     private SharedPreferences sharedPreferences;
-    private boolean isCurrentLoaded = false;
-    private String currentSprite;
-    private List<String> files = new ArrayList<String>();
-    private int changeTimer;
     private TweenManager tweenManager = new TweenManager();
-    private AssetManager assetManager = new AssetManager(new ExternalFileHandleResolver());
-    private boolean isCachedLoaded;
-    private boolean firstLoad = false;
+    private ImageLoader imageLoader = new ImageLoader();
+    private int changeTimer;
+    private BitmapFont font;
+    private boolean fullView;
+    private SpriteBatch spriteBatch;
 
     public MainScreen(SharedPreferences sharedPreferences) {
         this.sharedPreferences = sharedPreferences;
@@ -55,70 +36,43 @@ public class MainScreen implements Screen {
 
     @Override
     public void dispose() {
-        stage.dispose();
-        assetManager.dispose();
+        spriteBatch.dispose();
+        font.dispose();
+        imageLoader.dispose();
     }
 
     @Override public void render(float delta) {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
-        final SpriteBatch spriteBatch = stage.getSpriteBatch();
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         spriteBatch.begin();
 
-        if (!assetManager.update()) {
-            loaderSprite.draw(spriteBatch);
+//        log("render me :D");
+
+//        font.draw(spriteBatch, "FPS: " + Gdx.graphics.getFramesPerSecond(), 5, Gdx.graphics.getHeight() - 10);
+
+        imageLoader.update();
+
+        if (imageLoader.isLoading()) {
+            font.draw(spriteBatch, "Lade...", 5, 30);
         }
 
-        if (assetManager.isLoaded(currentSprite) && !isCurrentLoaded) {
-            isCurrentLoaded = true;
-
-            spriteToDraw.set(new Sprite(assetManager.get(currentSprite, Texture.class)));
-            updateImage(spriteToDraw);
-
-
-            if (!firstLoad) {
-                final Color c = spriteToDraw.getColor();
-                spriteToDraw.setColor(c.r, c.g, c.b, 0.0f);
-                Tween.to(spriteToDraw, SpriteAccessor.ALPHA, 2).target(1.0f).start(tweenManager);
-                firstLoad = true;
-            }
-
-            Timeline.createParallel()
-                    .beginParallel()
-                    .push(Tween.to(spriteToDraw, SpriteAccessor.ALPHA, 2).target(0.0f))
-                    .push(Tween.to(cachedSpriteToDraw, SpriteAccessor.ALPHA, 2).target(1.0f))
-                    .delay(changeTimer)
-                    .setCallback(new TweenCallback() {
-                        @Override public void onEvent(int type, BaseTween<?> source) {
-                            spriteToDraw.set(new Sprite(cachedSpriteToDraw));
-                            final Color c = spriteToDraw.getColor();
-                            spriteToDraw.setColor(c.r, c.g, c.b, 1.0f);
-                            setNewRandomImage();
-                        }
-                    })
-                    .end()
-                    .start(tweenManager);
+        if (currentSprite.getTexture() != null) {
+            currentSprite.draw(spriteBatch);
         }
 
-        if (assetManager.isLoaded(cached) && !isCachedLoaded) {
-            isCachedLoaded = true;
-            cachedSpriteToDraw.set(new Sprite(assetManager.get(cached, Texture.class)));
-            updateImage(cachedSpriteToDraw);
-            final Color c = cachedSpriteToDraw.getColor();
-            cachedSpriteToDraw.setColor(c.r, c.g, c.b, 0.0f);
+        if (cachedSprite.getTexture() != null) {
+            cachedSprite.draw(spriteBatch);
         }
 
-        if (spriteToDraw.getTexture() != null) {
-            spriteToDraw.draw(spriteBatch);
-        }
-
-        if (cachedSpriteToDraw.getTexture() != null) {
-            cachedSpriteToDraw.draw(spriteBatch);
-        }
-
-        if (files.isEmpty()) {
-            noFileSprite.draw(spriteBatch);
+        if (imageLoader.hasNoFilesForLoad()) {
+            font.draw(spriteBatch, "Keine Dateien gefunden!", 5, Gdx.graphics.getHeight() / 2);
         }
         spriteBatch.end();
 
@@ -127,38 +81,12 @@ public class MainScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        camera.viewportHeight = height;
-        camera.viewportWidth = width;
     }
 
     @Override public void show() {
-        float w = Gdx.graphics.getWidth();
-        float h = Gdx.graphics.getHeight();
-
-        camera = new OrthographicCamera();
-        stage = new Stage(w, h, true);
-
-        stage.setCamera(camera);
-
+        spriteBatch = new SpriteBatch();
+        font = new BitmapFont(Gdx.files.internal("font/white.fnt"), Gdx.files.internal("font/white_0.png"), false);
         Tween.registerAccessor(Sprite.class, new SpriteAccessor());
-
-        assetManager.setErrorListener(new AssetErrorListener() {
-            @Override public void error(AssetDescriptor asset, Throwable throwable) {
-                assetManager.clear();
-                cached = null;
-                currentSprite = null;
-                firstLoad = true;
-                setNewRandomImage();
-            }
-        });
-
-        loaderSprite = new Sprite(new Texture(IMG_LOAD_PNG));
-        noFileSprite = new Sprite(new Texture(IMG_NOFILES_PNG));
-        loaderSprite.setPosition(0, 30);
-        noFileSprite.setPosition(
-                Gdx.graphics.getWidth() / 2 - noFileSprite.getWidth() / 2,
-                Gdx.graphics.getHeight() / 2 - noFileSprite.getHeight() / 2);
-
     }
 
     private void updateImage(Sprite sprite) {
@@ -168,6 +96,7 @@ public class MainScreen implements Screen {
 
         float newHeight;
         float newWidth;
+
         if (width >= height) {
             newHeight = sprite.getHeight() / sprite.getWidth() * Gdx.graphics.getWidth();
             newWidth = Gdx.graphics.getWidth();
@@ -192,56 +121,76 @@ public class MainScreen implements Screen {
     public void updatePreference() {
         final String alter = Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES).getAbsolutePath();
         final String dir = sharedPreferences.getString("path", alter);
-        changeTimer = 3;
+        changeTimer = Integer.parseInt(sharedPreferences.getString("changeTimer", "10")) - 1;
+        fullView = sharedPreferences.getBoolean("fullView", false);
 
-        File dirName = new File(dir);
+        log("update preference: " + dir + ", " + changeTimer + ", " + fullView);
 
-        final File[] files1 = dirName.listFiles(new FileFilter() {
-            @Override public boolean accept(File file) {
-                String s = file.getName().toLowerCase();
-                return file.isFile() && (s.endsWith("jpeg") || s.endsWith("jpg") || s.endsWith("png"));
+        cachedSprite.set(new Sprite());
+        currentSprite.set(new Sprite());
+
+
+        imageLoader.updateFileFolder(new File(dir));
+        imageLoader.loadRandomImage(new AsyncCallback() {
+            @Override public void onSuccess(String file, Sprite result) {
+                currentSprite.set(result);
+                updateImage(currentSprite);
+
+                log("update current: " + file);
+
+                setAlpha(currentSprite, 0.0f);
+                to(currentSprite, ALPHA, 2).target(1.0f)
+                        .setCallback(new TweenCallback() {
+                            @Override public void onEvent(int type, BaseTween<?> source) {
+                                loadNewCache();
+                            }
+                        })
+                        .start(tweenManager);
             }
         });
-        files.clear();
-        for (File file : files1) {
-            files.add(file.getAbsolutePath().replaceAll(BASE_PATH, ""));
-        }
-
-        cached = null;
-        assetManager.clear();
-
-        setNewRandomImage();
     }
 
-    private void setNewRandomImage() {
-        if (cached != null && !assetManager.isLoaded(cached)) {
-            return;
-        }
+    public void nextImage() {
+        log("next Image ------------------------------");
 
-        if (!files.isEmpty()) {
-            if (currentSprite != null && assetManager.isLoaded(currentSprite)) {
-                assetManager.unload(currentSprite);
-            }
-            if (cached == null) {
-                currentSprite = getRandomFile();
-            } else {
-                currentSprite = cached;
-            }
-            isCurrentLoaded = false;
-            isCachedLoaded = false;
+        Timeline.createParallel()
+                .beginParallel()
+                .push(to(currentSprite, ALPHA, 2).target(0.0f))
+                .push(to(cachedSprite, ALPHA, 2).target(1.0f))
+                .setCallback(new TweenCallback() {
+                    @Override public void onEvent(int type, BaseTween<?> source) {
+                        log("animation done, start new TimerTask");
+                        currentSprite.getTexture().dispose();
+                        currentSprite.set(new Sprite(cachedSprite.getTexture()));
+                        updateImage(currentSprite);
+                        setAlpha(currentSprite, 1.0f);
 
-            cached = getRandomFile();
-        }
+                        loadNewCache();
+                    }
+                })
+                .end()
+                .start(tweenManager);
     }
 
-    private String getRandomFile() {
-        String external;
-        do {
-            final int randomFile = files.size() == 1 ? 0 : new Random().nextInt(files.size() - 1);
-            external = files.get(randomFile);
-        } while (currentSprite != null && currentSprite.equals(external));
+    private void loadNewCache() {
+        imageLoader.loadRandomImage(new AsyncCallback() {
+            @Override public void onSuccess(String file, Sprite result) {
+                cachedSprite = result;
+                updateImage(cachedSprite);
+                setAlpha(cachedSprite, 0.0f);
+                log("update cache: " + file);
 
-        assetManager.load(external, Texture.class);
-        return external;
+                Timeline.createSequence().beginSequence().delay(changeTimer).end().setCallback(new TweenCallback() {
+                    @Override public void onEvent(int type, BaseTween<?> source) {
+                        nextImage();
+                    }
+                }).start(tweenManager);
+            }
+        });
+    }
+
+    private void setAlpha(Sprite sprite, float a) {
+        final Color c = sprite.getColor();
+        sprite.setColor(c.r, c.g, c.b, a);
     }
 }

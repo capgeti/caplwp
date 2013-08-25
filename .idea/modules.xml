@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/caplwp/caplwp.iml" filepath="$PROJECT_DIR$/caplwp/caplwp.iml" />
       <module fileurl="file://$PROJECT_DIR$/caplwp-android/caplwp-android.iml" filepath="$PROJECT_DIR$/caplwp-android/caplwp-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/caplwp-desktop/caplwp-desktop.iml" filepath="$PROJECT_DIR$/caplwp-desktop/caplwp-desktop.iml" />
     </modules>
   </component>
 </project>

@@ -24,32 +24,70 @@
     </option>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="caplw" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2bc30fd-f0a8-4601-9869-83d1be103bf1" name="Default" comment="" />
+    <list default="true" id="a2bc30fd-f0a8-4601-9869-83d1be103bf1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp-android/assets/font/black_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp-android/assets/font/white_0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/AsyncCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/ImageLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp-android/res/values/arrays.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp-android/assets/font/black.fnt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caplwp-android/assets/font/white.fnt" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-android\assets\img\libgdx.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-android\assets\img\load.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-android\assets\img\nofiles.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\bin\de\capgeti\caplwp\Main.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\caplwp-desktop.eml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\libs\gdx-backend-lwjgl-natives.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\libs\gdx-backend-lwjgl-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\libs\gdx-backend-lwjgl.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\libs\gdx-natives.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekte\caplwp\caplwp-desktop\src\de\capgeti\caplwp\Main.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/file_icon.png" afterPath="$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/file_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/folder_icon.png" afterPath="$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/folder_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/caplwp-android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java" afterPath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java" afterPath="$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LiveWallpaper.java" afterPath="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LiveWallpaper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LivewallpaperSettings.java" afterPath="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LivewallpaperSettings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" afterPath="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp/caplwp.iml" afterPath="$PROJECT_DIR$/caplwp/caplwp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/res/xml/detail_settings.xml" afterPath="$PROJECT_DIR$/caplwp-android/res/xml/detail_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml" afterPath="$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="caplwp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/LivewallpaperSettings.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377035315974" ignored="false" />
     <file path="/livewallpaper.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376930871326" ignored="false" />
-    <file path="/LiveWallpaper.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376963207079" ignored="false" />
-    <file path="/fragment.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377347285097" ignored="false" />
-    <file path="/AndroidManifest.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376937899837" ignored="false" />
+    <file path="/LiveWallpaper.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377407474545" ignored="false" />
+    <file path="/fragment.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377468960473" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377468578477" ignored="false" />
     <file path="/Main.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377127885513" ignored="false" />
-    <file path="/CapLwp.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377130478648" ignored="false" />
+    <file path="/CapLwp.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377400881421" ignored="false" />
     <file path="/settings.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376935381234" ignored="false" />
-    <file path="/detail_settings.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377108512236" ignored="false" />
-    <file path="/Dummy.txt" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377347112397" ignored="false" />
+    <file path="/detail_settings.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377404820478" ignored="false" />
+    <file path="/Dummy.txt" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377397276149" ignored="false" />
     <file path="/button.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376937825728" ignored="false" />
-    <file path="/a.dummy" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376937903797" ignored="false" />
+    <file path="/a.dummy" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377468872116" ignored="false" />
     <file path="/strings.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377024593830" ignored="false" />
-    <file path="/MainScreen.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377132902595" ignored="false" />
+    <file path="/MainScreen.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377467231569" ignored="false" />
     <file path="/file.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376945763853" ignored="false" />
-    <file path="/FileBrowserActivity.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376954107437" ignored="false" />
+    <file path="/FileBrowserActivity.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377468128630" ignored="false" />
     <file path="/MainMenu.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376958098768" ignored="false" />
     <file path="$PARENT-1-PROJECT_LOC$/stargate-game/src/de/capgeti/stargate_game/screens/MainMenu.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376958105122" ignored="false" />
     <file path="$PARENT-1-PROJECT_LOC$/stargate-game/src/de/capgeti/stargate_game/entity/Player.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1376960162584" ignored="false" />
     <file path="/ImageAccessor.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377110465579" ignored="false" />
+    <file path="/ImageLoader.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377463022924" ignored="false" />
+    <file path="/AsyncCallback.java" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377398544235" ignored="false" />
+    <file path="/start_script.py" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377397397055" ignored="false" />
+    <file path="/arrays.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377404936403" ignored="false" />
+    <file path="/ua_com_vassiliev_filebrowser_layout.xml" changelist="a2bc30fd-f0a8-4601-9869-83d1be103bf1" time="1377467541233" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,50 +102,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" line="148" class="de.capgeti.caplwp.MainScreen$2" package="de.capgeti.caplwp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" line="215" class="de.capgeti.caplwp.MainScreen" package="de.capgeti.caplwp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" line="144" class="de.capgeti.caplwp.MainScreen$2" package="de.capgeti.caplwp">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -152,86 +147,110 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainScreen.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java">
+      <file leaf-file-name="CapLwp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.023679417">
+            <state line="6" column="13" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1659#1667#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrthographicCamera.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/OrthographicCamera.java">
+      <file leaf-file-name="FixedResolutionStrategy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/caplwp-android/libs/gdx-backend-android-sources.jar!/com/badlogic/gdx/backends/android/surfaceview/FixedResolutionStrategy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="13" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
+            <state line="18" column="13" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/caplwp-desktop/src/de/capgeti/caplwp/Main.java">
+      <file leaf-file-name="FileBrowserActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="44" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+            <state line="209" column="33" selection-start="8132" selection-end="8140" vertical-scroll-proportion="0.07055215">
+              <folding>
+                <element signature="e#5410#6412#0" expanded="true" />
+                <element signature="e#6401#6402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/adt-bundle-windows/sdk/platforms/android-4.2/android.jar!/android/app/Activity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="273" column="25" selection-start="10534" selection-end="10534" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextureRegion.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="16" selection-start="4598" selection-end="4598" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tween.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/caplwp/libs/tween-engine-api-sources.jar!/aurelienribon/tweenengine/Tween.java">
+      <file leaf-file-name="ua_com_vassiliev_filebrowser_layout.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="24" selection-start="7239" selection-end="7239" vertical-scroll-proportion="0.0">
+            <state line="64" column="25" selection-start="2348" selection-end="2360" vertical-scroll-proportion="-4.88">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="74" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpriteAccessor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/SpriteAccessor.java">
+      <file leaf-file-name="folder_icon.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/folder_icon.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arrays.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp-android/res/values/arrays.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
+            <state line="3" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sprite.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/Sprite.java">
+      <file leaf-file-name="MainScreen.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="272" column="16" selection-start="10007" selection-end="10007" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CapLwp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LiveWallpaper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LiveWallpaper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="26" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="83" column="5" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4198#4859#0" expanded="true" />
+                <element signature="e#4572#4788#0" expanded="true" />
+                <element signature="e#4761#4762#0" expanded="true" />
+                <element signature="e#4848#4849#0" expanded="true" />
+                <element signature="e#5181#5685#0" expanded="true" />
+                <element signature="e#5666#5667#0" expanded="true" />
+                <element signature="e#5825#6418#0" expanded="true" />
+                <element signature="e#6191#6372#0" expanded="true" />
+                <element signature="e#6353#6354#0" expanded="true" />
+                <element signature="e#6407#6408#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -243,25 +262,33 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/caplwp-android/res/layout/settings.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/res/xml/settings.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/res/layout/button.xml" />
         <option value="$PROJECT_DIR$/caplwp-android/res/layout/file.xml" />
         <option value="$USER_HOME$/AppData/Local/Temp/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java" />
         <option value="$PROJECT_DIR$/caplwp-android/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LivewallpaperSettings.java" />
-        <option value="$PROJECT_DIR$/caplwp-android/res/xml/detail_settings.xml" />
         <option value="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/ImageAccessor.java" />
         <option value="$PROJECT_DIR$/caplwp-desktop/src/de/capgeti/caplwp/Main.java" />
+        <option value="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/AsyncCallback.java" />
+        <option value="$PROJECT_DIR$/caplwp-android/res/xml/detail_settings.xml" />
+        <option value="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LivewallpaperSettings.java" />
         <option value="$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LiveWallpaper.java" />
+        <option value="$PROJECT_DIR$/caplwp-android/res/values/arrays.xml" />
         <option value="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java" />
+        <option value="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/ImageLoader.java" />
         <option value="$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java" />
+        <option value="$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml" />
+        <option value="$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java" />
+        <option value="$PROJECT_DIR$/caplwp-android/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -272,7 +299,35 @@
     <option name="width" value="1382" />
     <option name="height" value="754" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -283,7 +338,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -298,7 +353,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -452,6 +506,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wallpaper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2 Platform &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2 Platform &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="provider" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -531,6 +641,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="opengl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2 Platform &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Android 4.2 Platform &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -669,6 +831,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drawable-ldpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="caplwp-android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -880,119 +1092,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gdx.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="badlogic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gdx" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="graphics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="g2d" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp-desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp-desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp-desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp-desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="caplwp-desktop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propCompiler" />
+    <property name="options.lastSelected" value="coverage" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../RuinsOfRevenge-master" />
     <property name="AndroidLayoutSelectedEditor" value="text-editor" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -1022,6 +1152,13 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projekte\caplwp\caplwp-android\res\layout" />
       <recent name="C:\Projekte\caplwp\caplwp-android\res\xml" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="de.capgeti.caplwp.CapLwp" />
+      <recent name="de.capgeti.caplwp.ImageLoader" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.capgeti.caplwp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projekte\caplwp\caplwp-android\res\xml" />
@@ -1087,6 +1224,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1113,19 +1263,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1221,35 +1358,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6144781" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37205386" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5872483" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43265992" sideWeight="0.49772727" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.3922559" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12794612" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43265992" sideWeight="0.4969697" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.4010067" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6700337" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6144781" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6144781" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6144781" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32996634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1309,107 +1446,142 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/adt-bundle-windows/sdk/platforms/android-4.2/android.jar!/android/preference/EditTextPreference.class">
+    <entry file="file://$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LivewallpaperSettings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caplwp-android/res/xml/detail_settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="526" selection-end="537" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/tween-engine-api.jar!/aurelienribon/tweenengine/TweenManager.class">
+    <entry file="jar://C:/Program Files/adt-bundle-windows/sdk/platforms/android-4.2/android.jar!/android/content/SharedPreferences.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="-3.4" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/tween-engine-api-sources.jar!/aurelienribon/tweenengine/TweenManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="614" selection-end="614" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/SpriteBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="0" selection-start="10658" selection-end="10658" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/Texture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="363" column="12" selection-start="12351" selection-end="12351" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/tween-engine-api-sources.jar!/aurelienribon/tweenengine/Tween.java">
+    <entry file="jar://C:/Program Files/adt-bundle-windows/sdk/platforms/android-4.2/android.jar!/android/preference/PreferenceManager.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="24" selection-start="7239" selection-end="7239" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="272" column="16" selection-start="10007" selection-end="10007" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/g2d/TextureRegion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="16" selection-start="4598" selection-end="4598" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/SpriteAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caplwp-desktop/src/de/capgeti/caplwp/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
+        <state line="24" column="52" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/caplwp-android/src/de/capgeti/caplwp/LiveWallpaper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="26" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+        <state line="27" column="83" selection-start="1039" selection-end="1039" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#672#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/caplwp-android/libs/gdx-backend-android-sources.jar!/com/badlogic/gdx/backends/android/AndroidLiveWallpaperService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="16" selection-start="6195" selection-end="6195" vertical-scroll-proportion="-3.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="19" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1087#1346#0" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1525#1785#0" expanded="true" />
+            <element signature="e#1774#1775#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="5" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4198#4859#0" expanded="true" />
+            <element signature="e#4572#4788#0" expanded="true" />
+            <element signature="e#4761#4762#0" expanded="true" />
+            <element signature="e#4848#4849#0" expanded="true" />
+            <element signature="e#5181#5685#0" expanded="true" />
+            <element signature="e#5666#5667#0" expanded="true" />
+            <element signature="e#5825#6418#0" expanded="true" />
+            <element signature="e#6191#6372#0" expanded="true" />
+            <element signature="e#6353#6354#0" expanded="true" />
+            <element signature="e#6407#6408#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/CapLwp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/com/badlogic/gdx/graphics/OrthographicCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../RuinsOfRevenge-master/RuinsOfRevenge.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/caplwp/src/de/capgeti/caplwp/MainScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="931" selection-end="931" vertical-scroll-proportion="0.023679417">
+        <state line="6" column="13" selection-start="143" selection-end="143" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1659#1667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/caplwp-android/libs/gdx-backend-android-sources.jar!/com/badlogic/gdx/backends/android/surfaceview/FixedResolutionStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/res/values/arrays.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/res/drawable-ldpi/folder_icon.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="74" selection-start="1444" selection-end="1444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/res/layout/ua_com_vassiliev_filebrowser_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="25" selection-start="2348" selection-end="2360" vertical-scroll-proportion="-4.88">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/adt-bundle-windows/sdk/platforms/android-4.2/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="273" column="25" selection-start="10534" selection-end="10534" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/caplwp-android/src/ua/com/vassiliev/androidfilebrowser/FileBrowserActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="209" column="33" selection-start="8132" selection-end="8140" vertical-scroll-proportion="0.07055215">
+          <folding>
+            <element signature="e#5410#6412#0" expanded="true" />
+            <element signature="e#6401#6402#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1455,7 +1627,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>Android 4.2 Platform</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1467,7 +1639,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>caplwp</last-edited>
+          <last-edited>caplwp-android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1491,6 +1663,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>tween-engine-api-sources</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

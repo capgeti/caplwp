@@ -2,6 +2,7 @@ package de.capgeti.caplwp;
 
 import android.content.SharedPreferences;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 
 public class CapLwp extends Game {
 
@@ -10,6 +11,10 @@ public class CapLwp extends Game {
 
     public CapLwp(SharedPreferences sharedPreferences) {
         this.sharedPreferences = sharedPreferences;
+    }
+
+    public static void log(String msg) {
+        Gdx.app.log("caplwp", msg);
     }
 
     @Override public void create() {

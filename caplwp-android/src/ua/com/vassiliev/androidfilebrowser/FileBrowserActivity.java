@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
 import android.widget.*;
 import de.capgeti.caplwp.R;
 
@@ -126,8 +127,8 @@ public class FileBrowserActivity extends Activity {
             this.findViewById(R.id.upDirectoryButton).setEnabled(true);
         }
 
-        ((Button) this.findViewById(R.id.selectCurrentDirectoryButton)).setText("Select");
-        ((TextView) this.findViewById(R.id.currentDirectoryTextView)).setText("Current directory: " + curDirString);
+        ((Button) this.findViewById(R.id.selectCurrentDirectoryButton)).setText("Auswählen");
+        ((TextView) this.findViewById(R.id.currentDirectoryTextView)).setText("Aktuelles Verzeichnis: " + curDirString);
     }
 
     private void showToast(String message) {
@@ -157,7 +158,7 @@ public class FileBrowserActivity extends Activity {
                         updateCurrentDirectoryTextView();
                         Log.d(LOGTAG, path.getAbsolutePath());
                     } else {
-                        showToast("Path does not exist or cannot be read");
+                        showToast("Pfad existiert nicht oder konnte nicht gelesen werden!");
                     }
                 }
             }

@@ -50,7 +50,6 @@ public class LivewallpaperSettings extends Activity {
             if(sharedPreferences.contains("path")) {
                 dateiChooser.setSummary(sharedPreferences.getString("path", "Fehler!"));
             }
-
         }
 
         public void showFileChooser() {

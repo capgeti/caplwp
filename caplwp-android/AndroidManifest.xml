@@ -35,7 +35,8 @@
 
         <activity
                 android:name="ua.com.vassiliev.androidfilebrowser.FileBrowserActivity"
-                android:label="File browser"
+                android:label="Ordner Wählen"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
                 android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="ua.com.vassiliev.androidfilebrowser.SELECT_DIRECTORY_ACTION"></action>
