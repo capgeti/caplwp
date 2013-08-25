@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/../out/test/caplwp-android"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="gdx.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/../caplwp/libs/gdx-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/caplwp/libs/gdx-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/caplwp/libs/gdx.jar!/"/>
+	</lib>
+	<lib name="gdx-backend-android.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/libs/gdx-backend-android-sources.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/caplwp-android/libs/gdx-backend-android-sources.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/caplwp-android/libs/gdx-backend-android.jar!/"/>
+	</lib>
+</component>
