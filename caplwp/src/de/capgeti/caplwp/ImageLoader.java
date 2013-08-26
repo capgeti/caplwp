@@ -66,14 +66,16 @@ public class ImageLoader {
             log("file loaded: " + file + ", " + assetManager.get(file, Texture.class));
             String tmp = file + "";
             file = null;
-//            oldFiles.add(tmp);
-//            if (oldFiles.size() > 2 && files.size() > 2) {
-//                final String oldFile = oldFiles.remove(0);
-//                if(assetManager.isLoaded(oldFile)) {
-//                    log("remove: " + oldFile);
-//                    assetManager.get(oldFile, Texture.class).dispose();
-//                }
-//            }
+
+
+            oldFiles.add(tmp);
+            if (oldFiles.size() > 2 && files.size() > 2) {
+                final String oldFile = oldFiles.remove(0);
+                if(assetManager.isLoaded(oldFile)) {
+                    assetManager.unload(oldFile);
+                }
+            }
+
             result.onSuccess(tmp, new Sprite(assetManager.get(tmp, Texture.class)));
         }
     }

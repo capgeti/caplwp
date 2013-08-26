@@ -3,28 +3,52 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:key="first_preferencescreen">
 
-    <Preference
-            android:title="Ordner wählen"
-            android:summary="Ordnerpfad"
-            android:key="dateiChooser"/>
-    <ListPreference
-            android:title="Bild ändern alle..."
-            android:summary="Sekunde(n)"
-            android:defaultValue="10"
-            android:inputType="number"
-            android:key="changeTimer"
-            android:entries="@array/timerArray"
-            android:entryValues="@array/timerValue" />
-    />
+    <PreferenceCategory
+            android:title="Einstellungen">
 
-    <CheckBoxPreference
-            android:title="Bildschirm füllen"
-            android:summary="Bilder werden an Höhe/Breite angepasst"
-            android:defaultValue="false"
-            android:key="fullView"/>
+        <Preference
+                android:title="Ordner wählen"
+                android:summary="Ordnerpfad"
+                android:key="dateiChooser"/>
+        <ListPreference
+                android:title="Bild ändern alle..."
+                android:summary="Sekunde(n)"
+                android:defaultValue="10"
+                android:inputType="number"
+                android:key="changeTimer"
+                android:entries="@array/timerArray"
+                android:entryValues="@array/timerValue"/>
+        />
 
+        <CheckBoxPreference
+                android:title="Bildschirm füllen"
+                android:summary="Bilder werden an Höhe/Breite angepasst"
+                android:defaultValue="false"
+                android:key="fullView"/>
 
-    <Preference
-            android:layout="@layout/button"
-            android:key="websiteButton"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="Info">
+
+        <Preference
+                android:key="moreInfos"
+                android:title="Weitere Informationen"/>
+
+        <Preference
+                android:key="spendenButton"
+                android:title="Spenden per Paypal"
+                android:summary="Unterstützt mich wenn ihr mögt"/>
+
+        <Preference
+                android:key="websiteButton"
+                android:title="Website"
+                android:summary="http://capgeti.de"/>
+
+        <Preference
+                android:title="Version 0.9 Beta"
+                android:summary="Build: 26. August 2013 0:51"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

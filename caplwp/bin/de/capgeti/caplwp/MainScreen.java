@@ -97,7 +97,7 @@ public class MainScreen implements Screen {
         float newHeight;
         float newWidth;
 
-        if (width >= height) {
+        if (width >= height && !fullView) {
             newHeight = sprite.getHeight() / sprite.getWidth() * Gdx.graphics.getWidth();
             newWidth = Gdx.graphics.getWidth();
         } else {
@@ -160,7 +160,6 @@ public class MainScreen implements Screen {
                 .setCallback(new TweenCallback() {
                     @Override public void onEvent(int type, BaseTween<?> source) {
                         log("animation done, start new TimerTask");
-                        currentSprite.getTexture().dispose();
                         currentSprite.set(new Sprite(cachedSprite.getTexture()));
                         updateImage(currentSprite);
                         setAlpha(currentSprite, 1.0f);

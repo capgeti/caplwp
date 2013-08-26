@@ -18,7 +18,8 @@
             android:label="@string/app_name">
         <activity
                 android:name=".LivewallpaperSettings"
-                android:exported="true"/>
+                android:exported="true"
+                android:theme="@android:style/Theme.DeviceDefault.NoActionBar"/>
 
         <service
                 android:name=".LiveWallpaper"
@@ -36,7 +37,7 @@
         <activity
                 android:name="ua.com.vassiliev.androidfilebrowser.FileBrowserActivity"
                 android:label="Ordner Wählen"
-                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
                 android:configChanges="orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="ua.com.vassiliev.androidfilebrowser.SELECT_DIRECTORY_ACTION"></action>

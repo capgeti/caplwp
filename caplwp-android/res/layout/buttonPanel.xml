@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:weightSum="10"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:text="Photo Changer Live Wallpaper v0.9 Beta"
+            android:textStyle="bold"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="capgeti.de"
+            android:id="@+id/button"
+            android:layout_gravity="left|center_vertical"/>
+
+</LinearLayout>

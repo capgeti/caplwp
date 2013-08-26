@@ -1,8 +1,10 @@
 package de.capgeti.caplwp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -46,8 +48,48 @@ public class LivewallpaperSettings extends Activity {
                 }
             });
 
+
+            Preference websiteButton = findPreference("websiteButton");
+            websiteButton.setOnPreferenceClickListener(new
+
+                                                               Preference.OnPreferenceClickListener() {
+                                                                   @Override
+                                                                   public boolean onPreferenceClick(Preference preference) {
+                                                                       Uri website = Uri.parse("http://www.capgeti.de");
+                                                                       startActivity(new Intent(Intent.ACTION_VIEW, website));
+                                                                       return true;
+                                                                   }
+                                                               });
+
+            Preference moreInfos = findPreference("moreInfos");
+            moreInfos.setOnPreferenceClickListener(new
+
+                                                           Preference.OnPreferenceClickListener() {
+                                                               @Override
+                                                               public boolean onPreferenceClick(Preference preference) {
+                                                                   new AlertDialog.Builder(getActivity())
+                                                                           .setTitle("Photo Changer Live Wallpaper")
+                                                                           .setMessage("Es lebe werbefreie Apps :D\n\nErstellt mit Libgdx (Apache 2.0)\n\nErstellt von Michael Wolter aka capgeti, 2013")
+                                                                           .setNeutralButton("Ok", null).create().show();
+                                                                   return true;
+                                                               }
+                                                           });
+
+            Preference spendenButton = findPreference("spendenButton");
+            spendenButton.setOnPreferenceClickListener(new
+
+                                                               Preference.OnPreferenceClickListener() {
+                                                                   @Override
+                                                                   public boolean onPreferenceClick(Preference preference) {
+                                                                       Uri paypal = Uri.parse("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ECS6ZPNNLEXNE");
+                                                                       startActivity(new Intent(Intent.ACTION_VIEW, paypal));
+                                                                       return true;
+                                                                   }
+                                                               });
+
+
             final SharedPreferences sharedPreferences = getPreferenceManager().getSharedPreferences();
-            if(sharedPreferences.contains("path")) {
+            if (sharedPreferences.contains("path")) {
                 dateiChooser.setSummary(sharedPreferences.getString("path", "Fehler!"));
             }
         }
