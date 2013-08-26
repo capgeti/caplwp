@@ -129,6 +129,7 @@ public class MainScreen implements Screen {
         cachedSprite.set(new Sprite());
         currentSprite.set(new Sprite());
 
+        tweenManager.killAll();
 
         imageLoader.updateFileFolder(new File(dir));
         imageLoader.loadRandomImage(new AsyncCallback() {

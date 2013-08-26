@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
+import android.view.ViewGroup;
 import ua.com.vassiliev.androidfilebrowser.FileBrowserActivity;
 
 import static ua.com.vassiliev.androidfilebrowser.FileBrowserActivity.returnDirectoryParameter;
@@ -69,7 +70,7 @@ public class LivewallpaperSettings extends Activity {
                                                                public boolean onPreferenceClick(Preference preference) {
                                                                    new AlertDialog.Builder(getActivity())
                                                                            .setTitle("Photo Changer Live Wallpaper")
-                                                                           .setMessage("Es lebe werbefreie Apps :D\n\nErstellt mit Libgdx (Apache 2.0)\n\nErstellt von Michael Wolter aka capgeti, 2013")
+                                                                           .setView(getActivity().getLayoutInflater().inflate(R.layout.info, null))
                                                                            .setNeutralButton("Ok", null).create().show();
                                                                    return true;
                                                                }
