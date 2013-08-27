@@ -13,7 +13,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import java.io.File;
 
-import static android.os.Environment.DIRECTORY_PICTURES;
+import static android.os.Environment.DIRECTORY_DCIM;
 import static aurelienribon.tweenengine.Tween.to;
 import static de.capgeti.caplwp.CapLwp.log;
 import static de.capgeti.caplwp.SpriteAccessor.ALPHA;
@@ -119,7 +119,7 @@ public class MainScreen implements Screen {
     }
 
     public void updatePreference() {
-        final String alter = Environment.getExternalStoragePublicDirectory(DIRECTORY_PICTURES).getAbsolutePath();
+        final String alter = Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM) + "/Camera";
         final String dir = sharedPreferences.getString("path", alter);
         changeTimer = Integer.parseInt(sharedPreferences.getString("changeTimer", "10")) - 1;
         fullView = sharedPreferences.getBoolean("fullView", false);
