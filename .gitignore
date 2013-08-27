@@ -1,4 +1,6 @@
 *.iml
 .idea
 out
-capgeti-android/gen/*
+caplwp-android/gen
+caplwp-android/bin
+caplwp/bin
