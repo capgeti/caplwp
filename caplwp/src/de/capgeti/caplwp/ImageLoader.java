@@ -31,6 +31,8 @@ public class ImageLoader {
     private final AssetManager assetManager;
     private boolean isLoading = false;
     private String file;
+    private String oldFile;
+    private String oldOldFile;
     private AsyncCallback result;
     private List<String> files = new ArrayList<>();
     private List<String> oldFiles = new ArrayList<>();
@@ -42,6 +44,7 @@ public class ImageLoader {
         assetManager.setErrorListener(new AssetErrorListener() {
             @Override public void error(AssetDescriptor asset, Throwable throwable) {
                 log("load file failed: " + file + ", " + throwable.getMessage());
+                oldFile = oldOldFile;
                 loadRandomImage(result);
             }
         });
@@ -51,6 +54,8 @@ public class ImageLoader {
         log("clear");
         file = null;
         assetManager.clear();
+        oldFile = null;
+        oldOldFile = null;
 
         final File[] files1 = folder.listFiles(new FileFilter() {
             @Override public boolean accept(File file) {
@@ -127,7 +132,10 @@ public class ImageLoader {
             final int randomFile = files.size() == 1 ? 0 : new Random().nextInt(files.size());
             external = files.get(randomFile);
             log("new Random File: " + randomFile + ", " + external);
-        } while (file != null && file.equals(external));
+        } while (oldFile != null && oldFile.equals(external));
+
+        oldOldFile = oldFile;
+        oldFile = external;
 
         return external;
     }
