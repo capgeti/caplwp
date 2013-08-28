@@ -22,15 +22,17 @@ public class MainScreen implements Screen {
     private Sprite currentSprite = new Sprite();
     private Sprite cachedSprite = new Sprite();
     private SharedPreferences sharedPreferences;
+    private int orientation;
     private TweenManager tweenManager = new TweenManager();
     private ImageLoader imageLoader = new ImageLoader();
     private int changeTimer;
     private BitmapFont font;
-    private boolean fullView;
     private SpriteBatch spriteBatch;
+    private Long lastRender = System.currentTimeMillis();
 
-    public MainScreen(SharedPreferences sharedPreferences) {
+    public MainScreen(SharedPreferences sharedPreferences, int orientation) {
         this.sharedPreferences = sharedPreferences;
+        this.orientation = orientation;
         updatePreference();
     }
 
@@ -77,6 +79,8 @@ public class MainScreen implements Screen {
         spriteBatch.end();
 
         tweenManager.update(delta);
+
+        lastRender = System.currentTimeMillis();
     }
 
     @Override
@@ -87,26 +91,6 @@ public class MainScreen implements Screen {
         spriteBatch = new SpriteBatch();
         font = new BitmapFont(Gdx.files.internal("font/white.fnt"), Gdx.files.internal("font/white_0.png"), false);
         Tween.registerAccessor(Sprite.class, new SpriteAccessor());
-    }
-
-    private void updateImage(Sprite sprite) {
-
-        float height = sprite.getHeight();
-        float width = sprite.getWidth();
-
-        float newHeight;
-        float newWidth;
-
-        if (width >= height && !fullView) {
-            newHeight = sprite.getHeight() / sprite.getWidth() * Gdx.graphics.getWidth();
-            newWidth = Gdx.graphics.getWidth();
-        } else {
-            newWidth = sprite.getWidth() / sprite.getHeight() * Gdx.graphics.getHeight();
-            newHeight = Gdx.graphics.getHeight();
-        }
-        sprite.setSize(newWidth, newHeight);
-        sprite.setPosition((Gdx.graphics.getWidth() / 2) - (newWidth / 2),
-                (Gdx.graphics.getHeight() / 2) - (newHeight / 2));
     }
 
     @Override public void hide() {
@@ -122,7 +106,7 @@ public class MainScreen implements Screen {
         final String alter = Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM) + "/Camera";
         final String dir = sharedPreferences.getString("path", alter);
         changeTimer = Integer.parseInt(sharedPreferences.getString("changeTimer", "10")) - 1;
-        fullView = sharedPreferences.getBoolean("fullView", false);
+        boolean fullView = sharedPreferences.getBoolean("fullView", false);
 
         log("update preference: " + dir + ", " + changeTimer + ", " + fullView);
 
@@ -131,11 +115,13 @@ public class MainScreen implements Screen {
 
         tweenManager.killAll();
 
+        imageLoader.setOrientation(orientation);
+        imageLoader.setFullView(fullView);
+
         imageLoader.updateFileFolder(new File(dir));
         imageLoader.loadRandomImage(new AsyncCallback() {
             @Override public void onSuccess(String file, Sprite result) {
                 currentSprite.set(result);
-                updateImage(currentSprite);
 
                 log("update current: " + file);
 
@@ -161,8 +147,8 @@ public class MainScreen implements Screen {
                 .setCallback(new TweenCallback() {
                     @Override public void onEvent(int type, BaseTween<?> source) {
                         log("animation done, start new TimerTask");
-                        currentSprite.set(new Sprite(cachedSprite.getTexture()));
-                        updateImage(currentSprite);
+                        currentSprite.set(cachedSprite);
+
                         setAlpha(currentSprite, 1.0f);
 
                         loadNewCache();
@@ -176,7 +162,6 @@ public class MainScreen implements Screen {
         imageLoader.loadRandomImage(new AsyncCallback() {
             @Override public void onSuccess(String file, Sprite result) {
                 cachedSprite = result;
-                updateImage(cachedSprite);
                 setAlpha(cachedSprite, 0.0f);
                 log("update cache: " + file);
 

@@ -1,19 +1,26 @@
 package de.capgeti.caplwp;
 
+import android.content.res.Configuration;
+import android.graphics.drawable.GradientDrawable;
+import android.media.ExifInterface;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetErrorListener;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.resolvers.ExternalFileHandleResolver;
+import com.badlogic.gdx.graphics.GL10;
+import com.badlogic.gdx.graphics.GLCommon;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
 import static de.capgeti.caplwp.CapLwp.log;
 
 /**
@@ -23,12 +30,16 @@ import static de.capgeti.caplwp.CapLwp.log;
 public class ImageLoader {
 
     public static final String BASE_PATH = Gdx.files.getExternalStoragePath();
+    public static final int GDX_HEIGHT = Gdx.graphics.getHeight();
+    public static final int GDX_WIDTH = Gdx.graphics.getWidth();
     private final AssetManager assetManager;
     private boolean isLoading = false;
     private String file;
     private AsyncCallback result;
     private List<String> files = new ArrayList<>();
     private List<String> oldFiles = new ArrayList<>();
+    private boolean fullView;
+    private int orientation;
 
     public ImageLoader() {
         assetManager = new AssetManager(new ExternalFileHandleResolver());
@@ -65,27 +76,41 @@ public class ImageLoader {
         if (assetManager.isLoaded(file)) {
             log("file loaded: " + file + ", " + assetManager.get(file, Texture.class));
             String tmp = file + "";
-            file = null;
-
 
             oldFiles.add(tmp);
-            if (oldFiles.size() > 2 && files.size() > 2) {
+            if (oldFiles.size() > 2) {
                 final String oldFile = oldFiles.remove(0);
-                if(assetManager.isLoaded(oldFile)) {
+                if (assetManager.isLoaded(oldFile)) {
                     assetManager.unload(oldFile);
                 }
             }
 
-            result.onSuccess(tmp, new Sprite(assetManager.get(tmp, Texture.class)));
+            final Texture texture = assetManager.get(tmp, Texture.class);
+            texture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+            final Sprite result1 = new Sprite(texture);
+
+            updateImage(result1);
+
+            file = null;
+
+            result.onSuccess(tmp, result1);
         }
     }
 
     public void loadRandomImage(AsyncCallback result) {
         if (files == null || files.isEmpty()) return;
         file = getRandomFile();
+        if (oldFiles.size() == 1 && oldFiles.contains(file)) {
+            file = null;
+            return;
+        }
         this.result = result;
         log("load file: " + file);
         assetManager.load(file, Texture.class);
+    }
+
+    public void setFullView(boolean fullView) {
+        this.fullView = fullView;
     }
 
     public boolean isLoading() {
@@ -109,5 +134,51 @@ public class ImageLoader {
         } while (file != null && file.equals(external));
 
         return external;
+    }
+
+    public void updateImage(Sprite sprite) {
+
+        float height = sprite.getHeight();
+        float width = sprite.getWidth();
+
+        float newHeight;
+        float newWidth;
+
+        if (file != null) {
+            try {
+                ExifInterface exif = new ExifInterface(new File(BASE_PATH, file).getAbsolutePath());
+                int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, 1);
+                if (orientation == 6) {
+                    sprite.rotate90(true);
+                    float tmp = width;
+                    width = height;
+                    height = tmp;
+                }
+            } catch (IOException e) {
+                log("Error Orientation: " + e.getMessage());
+            }
+        }
+
+        if(orientation == ORIENTATION_LANDSCAPE) {
+            float tmp = width;
+            width = height;
+            height = tmp;
+        }
+
+        if (width >= height && !fullView) {
+            newHeight = height / width * GDX_WIDTH;
+            newWidth = GDX_WIDTH;
+        } else {
+            newWidth = width / height * GDX_HEIGHT;
+            newHeight = GDX_HEIGHT;
+        }
+        sprite.setSize(newWidth, newHeight);
+        sprite.setPosition((GDX_WIDTH / 2) - (newWidth / 2),
+                (GDX_HEIGHT / 2) - (newHeight / 2));
+
+    }
+
+    public void setOrientation(int orientation) {
+        this.orientation = orientation;
     }
 }

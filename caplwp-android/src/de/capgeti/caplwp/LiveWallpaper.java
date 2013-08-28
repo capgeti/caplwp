@@ -19,8 +19,7 @@ public class LiveWallpaper extends AndroidLiveWallpaperService {
         super.onCreateApplication();
 
         SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        game = new CapLwp(defaultSharedPreferences);
-
+        game = new CapLwp(defaultSharedPreferences, getResources().getConfiguration().orientation);
         initialize(game, true);
     }
 
