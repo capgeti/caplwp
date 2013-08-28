@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="akkuArray">
+        <item>50 ms - Flüssig</item>
+        <item>60 ms</item>
+        <item>70 ms</item>
+        <item>80 ms - Leichtes Stocken</item>
+        <item>90 ms</item>
+        <item>100 ms</item>
+        <item>120 ms - Starkes Stocken</item>
+        <item>140 ms</item>
+        <item>160 ms</item>
+    </string-array>
+    <string-array name="akkuValue">
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>120</item>
+        <item>140</item>
+        <item>160</item>
+    </string-array>
+</resources>

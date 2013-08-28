@@ -18,7 +18,15 @@
                 android:key="changeTimer"
                 android:entries="@array/timerArray"
                 android:entryValues="@array/timerValue"/>
-        />
+
+        <ListPreference
+                android:title="FPS Pausenlänge"
+                android:summary="Höhere Zeit > weniger Leistung > Mehr Akku"
+                android:defaultValue="80"
+                android:inputType="number"
+                android:key="akkuTimer"
+                android:entries="@array/akkuArray"
+                android:entryValues="@array/akkuValue"/>
 
         <CheckBoxPreference
                 android:title="Bildschirm füllen"

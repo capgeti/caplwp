@@ -26,9 +26,9 @@ public class MainScreen implements Screen {
     private TweenManager tweenManager = new TweenManager();
     private ImageLoader imageLoader = new ImageLoader();
     private int changeTimer;
+    private int akkuTimer = 80;
     private BitmapFont font;
     private SpriteBatch spriteBatch;
-    private Long lastRender = System.currentTimeMillis();
 
     public MainScreen(SharedPreferences sharedPreferences, int orientation) {
         this.sharedPreferences = sharedPreferences;
@@ -48,7 +48,7 @@ public class MainScreen implements Screen {
         Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 
         try {
-            Thread.sleep(50);
+            Thread.sleep(akkuTimer);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -79,8 +79,6 @@ public class MainScreen implements Screen {
         spriteBatch.end();
 
         tweenManager.update(delta);
-
-        lastRender = System.currentTimeMillis();
     }
 
     @Override
@@ -106,6 +104,7 @@ public class MainScreen implements Screen {
         final String alter = Environment.getExternalStoragePublicDirectory(DIRECTORY_DCIM) + "/Camera";
         final String dir = sharedPreferences.getString("path", alter);
         changeTimer = Integer.parseInt(sharedPreferences.getString("changeTimer", "10")) - 1;
+        akkuTimer = Integer.parseInt(sharedPreferences.getString("akkuTimer", "80")) - 1;
         boolean fullView = sharedPreferences.getBoolean("fullView", false);
 
         log("update preference: " + dir + ", " + changeTimer + ", " + fullView);
