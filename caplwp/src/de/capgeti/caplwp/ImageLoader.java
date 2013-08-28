@@ -1,15 +1,11 @@
 package de.capgeti.caplwp;
 
-import android.content.res.Configuration;
-import android.graphics.drawable.GradientDrawable;
 import android.media.ExifInterface;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetErrorListener;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.resolvers.ExternalFileHandleResolver;
-import com.badlogic.gdx.graphics.GL10;
-import com.badlogic.gdx.graphics.GLCommon;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 
@@ -20,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import static android.content.res.Configuration.ORIENTATION_LANDSCAPE;
+import static android.content.res.Configuration.ORIENTATION_PORTRAIT;
 import static de.capgeti.caplwp.CapLwp.log;
 
 /**
@@ -159,22 +155,30 @@ public class ImageLoader {
             }
         }
 
-        if(orientation == ORIENTATION_LANDSCAPE) {
-            float tmp = width;
-            width = height;
-            height = tmp;
+        if (orientation == ORIENTATION_PORTRAIT) {
+            if (width >= height && !fullView) {
+                newHeight = height / width * GDX_WIDTH;
+                newWidth = GDX_WIDTH;
+            } else {
+                newWidth = width / height * GDX_HEIGHT;
+                newHeight = GDX_HEIGHT;
+            }
+            sprite.setPosition((GDX_WIDTH / 2) - (newWidth / 2),
+                    (GDX_HEIGHT / 2) - (newHeight / 2));
+
+        } else {
+            if (width >= height || fullView) {
+                newHeight = height / width * GDX_HEIGHT;
+                newWidth = GDX_HEIGHT;
+            } else {
+                newWidth = width / height * GDX_WIDTH;
+                newHeight = GDX_WIDTH;
+            }
+            sprite.setPosition((GDX_HEIGHT / 2) - (newWidth / 2),
+                    (GDX_WIDTH / 2) - (newHeight / 2));
         }
 
-        if (width >= height && !fullView) {
-            newHeight = height / width * GDX_WIDTH;
-            newWidth = GDX_WIDTH;
-        } else {
-            newWidth = width / height * GDX_HEIGHT;
-            newHeight = GDX_HEIGHT;
-        }
         sprite.setSize(newWidth, newHeight);
-        sprite.setPosition((GDX_WIDTH / 2) - (newWidth / 2),
-                (GDX_HEIGHT / 2) - (newHeight / 2));
 
     }
 
