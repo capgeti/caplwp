@@ -4,3 +4,4 @@ out
 caplwp-android/gen
 caplwp-android/bin
 caplwp/bin
+*.keystore
